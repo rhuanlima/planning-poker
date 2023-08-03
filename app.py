@@ -18,8 +18,9 @@ def home():
 
 
 @app.route('/session/', methods=['GET'])
-@app.route('/session/<key>/<alternative>', methods=['GET'])
-def session(key=None, alternative=None):
+def session():
+    key  = request.args.get('key', None)
+    alternative  = request.args.get('alternative', None)
     if key is None or not r.exists(key):
         return render_template('creator.html')
     # alternative = randomname.get_name(adj=('colors', ), noun=('coding', ), sep=' ').title()
