@@ -90,7 +90,7 @@ function stop(e) {
 };
 
 function copy(link) {
-    alert(link + '/'+ document.getElementById("alternative").text);
+    alert(link + '/'+ document.getElementById("alternative").value);
     navigator.clipboard.writeText(window.location.origin + link);
     M.toast({html: 'Link is copied to clipboard', classes: 'rounded'});
 };
