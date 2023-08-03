@@ -8,6 +8,12 @@
           type="text/css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
           type="text/css" rel="stylesheet" media="screen,projection"/>
+          <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('select');
+                    var instances = M.FormSelect.init(elems, options);
+                });
+          </script>
     <style type="text/css">
     html, body, .valign-wrapper {
       height: 100%;
