@@ -10,9 +10,9 @@
 {% block content %}
 <div class="row single link">
     <div class="col s12 valign-wrapper center-align z-depth-1 blue lighten-5">
-        <i class="material-icons prefix">link</i>
+        <!-- <i class="material-icons prefix">link</i> -->
         <!-- <a href="https://github.com/v-omelai/planning-poker">&nbsp;&nbsp;<b>GitHub Repository</b>&nbsp;&nbsp;</a> -->
-        <input name="alternative">
+        <input id="alternative">
     </div>
 </div>
 {% endblock %}
@@ -90,7 +90,7 @@ function stop(e) {
 };
 
 function copy(link) {
-    alert(link);
+    alert(link + $('input#alternative'));
     navigator.clipboard.writeText(window.location.origin + link);
     M.toast({html: 'Link is copied to clipboard', classes: 'rounded'});
 };
