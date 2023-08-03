@@ -24,9 +24,9 @@
     <div class="row last">
         <div class="input-field col s12">
             <!-- <input type="number" id="value" name="value" class="validate" step="0.5" min="0" max="100" required> -->
-            <select name="value" id="value">
+            <select name="value" id="value" class="validate" required>
                 <option value="0"><i class="material-icons prefix">coffee</i></option>
-                <option value="1">1</option>
+                <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="5">5</option>
@@ -43,7 +43,7 @@
 
 {% block action %}
 <button class="btn waves-effect waves-light" type="submit" form="vote">
-    VOTE
+    Votar
 </button>
 {% endblock %}
 
@@ -56,9 +56,9 @@ $(document).ready(() => {
             url: $form.attr('action'),
             data: $form.serialize()
         }).done(() => {
-            M.toast({html: 'Yeah! You voted :)', classes: 'rounded'});
+            M.toast({html: 'Ok! Você Votou! :)', classes: 'rounded'});
         }).fail(() => {
-            M.toast({html: 'Oops! Something went wrong :(', classes: 'rounded'});
+            M.toast({html: 'Oxi! Algo deu errado :(', classes: 'rounded'});
         });
         e.preventDefault();
     });

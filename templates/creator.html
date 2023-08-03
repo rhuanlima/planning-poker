@@ -52,7 +52,7 @@ function start(e) {
             e.data.$btnTimer.text('STOP');
         })
         .fail(() => {
-            M.toast({html: 'Oops! Something went wrong :(', classes: 'rounded'});
+            M.toast({html: 'Oxi, algo deu errado! :(', classes: 'rounded'});
         });
 };
 
@@ -64,7 +64,7 @@ function stop(e) {
             e.data.$btnTimer.text('START');
 
             if ($.isEmptyObject(data['votes'])) {
-                M.toast({html: 'Voting is over. No results :(', classes: 'rounded'});
+                M.toast({html: 'Votação finalizada! Mostrando os resultados :(', classes: 'rounded'});
             } else {
                 e.data.$ulVotes.empty();
                 for (const property in data['votes']) {
@@ -85,7 +85,7 @@ function stop(e) {
             };
         })
         .fail(() => {
-            M.toast({html: 'Oops! Something went wrong :(', classes: 'rounded'});
+            M.toast({html: 'Oxi, algo deu errado! :(', classes: 'rounded'});
         });
 };
 
@@ -118,7 +118,7 @@ $(document).ready(() => {
                     copy(link);
                 })
                 .fail(() => {
-                    M.toast({html: 'Oops! Something went wrong :(', classes: 'rounded'});
+                    M.toast({html: 'Oxi, algo deu errado! :(', classes: 'rounded'});
                 });
         };
     });

@@ -40,7 +40,7 @@ def vote():
     key, name, alternative, value = form['key'], form['name'], form['alternative'], form['value']
     voted = datetime.datetime.now(datetime.timezone.utc).isoformat()
     data = json.loads(r.get(key))
-    data['participants'][f'{name} aka {alternative}'] = (value, voted)
+    data['participants'][f'{name}'] = (value, voted)
     r.set(key, json.dumps(data))
     return 'OK', 200
 
