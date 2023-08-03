@@ -38,7 +38,7 @@
         <ul id="results-ul-votes" class="collection"></ul>
     </div>
     <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat"><b>Gotcha!</b></a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"><b>Ok</b></a>
     </div>
 </div>
 {% endblock %}
@@ -122,5 +122,8 @@ $(document).ready(() => {
                 });
         };
     });
+});
+$(document).ready(function(){
+$('select').formSelect();
 });
 {% endblock %}
