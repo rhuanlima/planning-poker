@@ -42,7 +42,7 @@ def vote():
     data = json.loads(r.get(key))
     data['participants'][f'{name}'] = (value, voted)
     r.set(key, json.dumps(data))
-    return 'OK', 200
+    return 'Pode fechar a janela', 200
 
 
 @app.route('/start/', methods=['POST'])
