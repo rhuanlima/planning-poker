@@ -18,7 +18,7 @@ def home():
 
 
 @app.route('/session/', methods=['GET'])
-@app.route('/session/<key>', methods=['GET'])
+@app.route('/session/<key>/<alternative>', methods=['GET'])
 def session(key=None, alternative=None):
     if key is None or not r.exists(key):
         return render_template('creator.html')
