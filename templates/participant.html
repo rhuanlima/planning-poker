@@ -18,13 +18,22 @@
     </div>
     <div class="row aka">
         <div class="col s12 valign-wrapper center-align z-depth-1 deep-orange lighten-4 blue-grey-text text-darken-4">
-            <span class="col s12">&nbsp;<b>Also known as {{ alternative }}</b>&nbsp;</span>
+            <span class="col s12">&nbsp;<b>Votando na Task {{ alternative }}</b>&nbsp;</span>
         </div>
     </div>
     <div class="row last">
         <div class="input-field col s12">
-            <input type="number" id="value" name="value" class="validate" step="0.5" min="0" max="100" required>
-            <label for="value">Value</label>
+            <!-- <input type="number" id="value" name="value" class="validate" step="0.5" min="0" max="100" required> -->
+            <select name="value" id="value">
+                <option value="0"><i class="material-icons prefix">coffee</i></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="8">8</option>
+                <option value="13">13</option>
+            </select>
+            <label for="value">Valor</label>
         </div>
     </div>
     <input type="hidden" name="key" value="{{ key }}">
